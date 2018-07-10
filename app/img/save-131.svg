@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="81" height="80" viewBox="0 0 81 80">
+    <defs>
+        <text id="b" fill="#FFF" font-family="Catamaran-ExtraBold, Catamaran" font-size="11" font-weight="600" letter-spacing="-.033">
+            <tspan x="14" y="32">YOU SAVE</tspan>
+        </text>
+        <filter id="a" width="126.4%" height="177.8%" x="-13.2%" y="-27.8%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#4A306D" d="M40.747 74.62l-5.011 5.033-3.602-6.12-6.106 3.627-1.967-6.824-6.816 1.996-.208-7.1-7.098.239 1.564-6.928-6.934-1.535 3.237-6.32-6.334-3.212 4.707-5.317-5.337-4.686 5.882-3.98-4.004-5.865 6.687-2.392-2.42-6.677 7.072-.653-.683-7.07 7.012 1.126 1.097-7.016 6.512 2.834 2.807-6.524 5.602 4.364L40.747 0l4.341 5.62 5.603-4.364 2.807 6.524 6.512-2.834 1.096 7.016 7.012-1.125-.683 7.069 7.072.653-2.42 6.677 6.687 2.392-4.004 5.866 5.882 3.98-5.336 4.685 4.707 5.317-6.334 3.211 3.237 6.321-6.934 1.535 1.563 6.928-7.097-.238-.209 7.099-6.815-1.996-1.968 6.824-6.105-3.628-3.602 6.12z"/>
+        <g fill="#FFF">
+            <use filter="url(#a)" xlink:href="#b"/>
+            <use xlink:href="#b"/>
+        </g>
+        <text fill="#FFF" font-family="Roboto-Bold, Roboto" font-size="26" font-weight="bold">
+            <tspan x="11" y="56">$131</tspan>
+        </text>
+    </g>
+</svg>

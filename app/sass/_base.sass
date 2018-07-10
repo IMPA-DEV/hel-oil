@@ -1,0 +1,106 @@
+$color_main: #4a306d
+$color_hover: #79a50b
+
+$fonts_Montserrat : 'Montserrat', sans-serif
+$fonts_Roboto : 'Roboto', sans-serif
+
+body
+  position: relative
+  font-size: 20px
+  margin: 0 auto
+  color: #fff
+  font-family: $fonts_Montserrat
+  overflow-x: hidden
+  background-color: #fffad5
+
+.v-center
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+
+.container
+  max-width: 1152px
+  padding: 0 8px
+  width: 100%
+  box-sizing: border-box
+  margin: 0 auto
+
+.flex
+  display: flex
+  justify-content: space-between
+
+.save-40,
+.save-131
+  position: absolute
+  top: 46px
+  left: 39.5%
+
+.save-131
+  left: 53%
+
+a.btn
+  font-family: $fonts_Roboto
+  font-size: 20px
+  font-weight: 500
+  font-style: normal
+  font-stretch: normal
+  line-height: normal
+  letter-spacing: normal
+  text-align: center
+  display: inline-block
+  color: #fff
+  padding: 15px 40px
+  text-transform: uppercase
+  border-radius: 30px
+  background-color: $color_main
+  transition: 0.3s
+  &:hover
+    background-color: $color_hover
+    transition: 0.3s
+
+/* slick */
+.slick-arrow
+  position: absolute
+  top: 34%
+  border: none
+  background-color: transparent
+  color: transparent
+  cursor: pointer
+  outline: none
+.slick-prev
+  background-image: url("../img/arrow-left.svg")
+  background-repeat: no-repeat
+  background-position: center
+  width: 30px
+  height: 57px
+  left: -40px
+.slick-next
+  background-image: url("../img/arrow-right.svg")
+  background-repeat: no-repeat
+  background-position: center
+  width: 30px
+  height: 57px
+  right: -40px
+
+.nav-btn.close
+  display: none
+
+.hidden
+  overflow: hidden
+.slick-dots
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-top: 35px
+  li
+    width: 11px
+    height: 11px
+    border: solid 2px $color_main
+    border-radius: 50%
+    cursor: pointer
+    margin: 0 4px
+    &.slick-active
+      background-color: $color_main
+    >*
+      display: none
