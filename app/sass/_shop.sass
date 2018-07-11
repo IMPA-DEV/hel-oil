@@ -1,0 +1,410 @@
+// variables
+$robotoFont: 'Roboto', sans-serif
+$montFont: 'Montserrat', sans-serif
+$btnColor: #4a306d
+$btnHover: #79a50b
+$textColor: #4a306d
+
+//base
+.container
+  padding: 0 24px
+.section-title
+  font-size: 64px
+  line-height: 68px
+  font-weight: 600
+  margin: 0 0 80px
+  letter-spacing: normal
+  text-align: center
+  color: $textColor
+.shop-btn
+  display: inline-block
+  color: #ffffff
+  background-color: $btnColor
+  padding: 18px 46px
+  border-radius: 30px
+  font-size: 24px
+  text-transform: uppercase
+  font-weight: 500
+  font-family: $robotoFont
+  transition: background 300ms
+  &:hover
+    background-color: $btnHover
+//navigation
+.nav
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(74, 48, 109, 0.97)
+  transform: translateY(-100%)
+  opacity: 0
+  transition: all 300ms ease
+  z-index: -1
+  padding: 130px 0 0
+  overflow-y: scroll 
+  &.open
+    transform: translateY(0)
+    opacity: 1
+    transition: all 300ms ease  
+    z-index: 20
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 0 0 111px
+  &__link
+    border: solid 2px #ffffff
+    border-radius: 40px
+    display: inline-block
+    padding: 15px 43px
+    text-transform: uppercase
+    font-size: 20px
+    font-weight: 500
+    font-family: $robotoFont
+    margin: 0 45px 0 0
+    cursor: pointer
+    &:hover
+      background-color: $btnHover
+  &__col
+    &:first-child
+      display: flex
+      align-items: center
+  &__icon
+    display: inline-block
+    width: 53px
+    height: 40px
+    background-image: url('../img/shop/cart.svg')
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    cursor: pointer
+  &__close
+    width: 34px
+    height: 34px
+    background: url('../img/shop/close-nav.svg') no-repeat center
+    background-size: contain
+    cursor: pointer
+  &__list
+    display: flex
+    flex-direction: column
+    align-items: center
+    li
+      margin: 0 0 50px
+      a
+        color: #ffffff
+        font-size: 36px
+        font-weight: 500
+
+//warn
+.warn
+  padding: 30px 0
+  background-color: #4a306d
+  &__title
+    font-size: 24px
+    font-family: $robotoFont
+    text-align: center
+    position: relative
+    z-index: 21
+
+// header
+.header
+  padding: 35px 0
+  background-image: url('../img/shop/home-bg.jpg')
+  min-height: 1px
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &__nav
+    display: flex
+    align-items: center
+  &__btn
+    background-color: transparent
+    border: solid 2px #ffffff
+    padding: 15px 43px
+    font-size: 20px
+    font-weight: 500
+    margin: 0 45px 0 0
+    &:hover
+      background-color: #4a306d
+  &__title
+    font-weight: 500
+    font-size: 24px
+    margin: 20px 0 0
+.nav
+  &__btn
+    width: 57px
+    margin: 0 0 0 38px
+    cursor: pointer
+  &__line
+    height: 6px
+    background-color: #fff
+    margin: 8px 0
+    border-radius: 20px
+
+//links
+.links
+  padding: 44px 0 40px
+  background-color: #668b0a
+  &__item
+    display: flex
+    align-items: center
+    &-home
+      font-size: 20px
+      color: #fff
+    &-arr
+      width: 27px
+      height: 13px
+      background-image: url('../img/shop/link-arr.svg')
+      background-size: contain
+      background-position: center
+      background-repeat: no-repeat
+      margin: 3px 5px 0
+    &-act
+      font-size: 20px
+      color: #303030
+    &-descr
+      color: #79a50b
+//shop
+.shop
+  padding: 112px 0 130px
+  color: $textColor
+  font-family: $montFont
+  &__row
+    display: flex
+    flex-direction: column
+    width: 100%
+    max-width: 752px
+    margin: 0 auto
+  &__item
+    box-shadow: 0 2px 3px 0 rgba(108, 108, 108, 0.5)
+    background-color: rgba(255, 255, 255, 0.25)
+    border-radius: 20px
+    padding: 23px 30px 50px
+    text-align: center
+    margin: 0 0 50px
+    &:last-child
+      margin: 0
+    &-title
+      font-size: 28px
+      margin: 9px 0 20px
+      font-weight: 500
+    &-btn
+      transition: background 300ms
+      &:hover
+        background-color: $btnHover
+  &__product
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    font-family: $robotoFont
+    margin: 0 0 50px
+    &-title
+      font-size: 24px
+      color: #303030
+      font-weight: 500
+    &-shipp
+      font-size: 18px
+      padding: 7px 16px 6px
+      border-radius: 5px
+  &__rev
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 0 20px
+    &-stars
+      width: 150px
+      height: 28px
+      background: url('../img/shop/star.svg') center
+      margin: 0 15px 0 0
+    &-text
+      font-size: 20px
+      font-weight: 500
+  &__price
+    font-size: 36px
+    color: #79a50b
+    font-weight: 600
+    margin: 0 0 30px
+    span
+      font-size: 20px
+      color: #6c6c6c
+      font-weight: 400
+      padding-left: 5px
+  &__quality
+    margin: 0 0 30px
+    display: flex
+    padding: 0 50px
+    &-col
+      width: 1 / 3 * 100%
+    &-top
+      font-size: 24px
+      font-weight: 600
+      margin: 0 0 5px
+    &-line
+      width: 37px
+      border: solid 1px #6c6c6c
+      margin: 0 auto
+    &-bottom
+      font-size: 24px
+      text-transform: uppercase
+      margin: 5px 0 0
+      color: #6c6c6c
+  .s131,
+  .s40
+    max-width: 294px
+    margin: 0 auto
+    position: relative
+    &:after
+      content: ''
+      display: block
+      width: 80px
+      height: 80px
+      position: absolute
+      background-size: contain
+  .s40
+    &:after
+      background: url('../img/shop/40.svg') no-repeat center
+      top: -30px
+      right: 105px
+  .s131
+    &:after
+      background: url('../img/shop/131.svg') no-repeat center
+      top: -30px
+      right: 50px
+//cbd
+.cbd
+  padding: 0 0 160px
+  background: url('../img/shop/4.png') no-repeat
+  background-size: auto 100%
+  background-position: right center 
+  &__item
+    max-width: 420px
+    text-align: left
+    &-title
+      text-align: left
+      margin: 0 0 26px
+    &-descr
+      color: #303030
+      font-size: 20px
+      line-height: 31px
+
+//footerS
+.footerS
+  margin-top: 130px
+  background-image: url('../img/shop/footer-bg.png')
+  background-size: 100% 100%
+  background-position: center
+  background-repeat: no-repeat
+  padding: 0 0 50px
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    padding: 0 0 84px
+    position: relative
+    bottom: 70px
+    margin-bottom: -70px
+  &__col
+    &:last-child
+      max-width: 762px
+      width: 100%
+  &__sub
+    width: 100%
+    display: flex
+    margin: 0 0 20px
+    // width: 100%
+    .sub-inp
+      width: 2 / 3 * 100%
+      outline: none
+      border: none
+      padding: 33px 0 33px 50px
+      border-top-left-radius: 50px
+      border-bottom-left-radius: 50px
+      font-size: 20px
+      font-weight: 500
+    input
+      &::-webkit-input-placeholder
+        font-size: 20px
+        font-weight: 500
+        color: #303030
+    input
+      &:focus
+        &::-webkit-input-placeholder
+          opacity: 0
+    &-descr
+      font-size: 20px
+      align-items: center
+      margin: 0 0 40px
+  &__btn
+    width: 1 / 3 * 100%
+    border-radius: 0
+    padding: 0
+    background-image: url('../img/shop/icon-btn.svg')
+    background-repeat: no-repeat
+    background-position: center
+    border-top-right-radius: 50px
+    border-bottom-right-radius: 50px
+  &-top
+    border-top: solid 3px #668b0a
+    padding: 50px 0
+    &__row
+      display: flex
+      margin: 0 -8px
+      align-items: flex-start
+    &__col
+      padding: 0 8px
+      width: 1 / 4 * 100%
+      font-size: 14px
+    &__title
+      font-size: 16px
+      margin: 0 0 10px
+      font-weight: 500
+      text-transform: uppercase
+    &__subtitle
+      font-size: 16px
+      margin: 0 0 10px
+      font-weight: 500
+    &__descr
+      margin: 0 0 10px
+      line-height: normal
+  &-bottom
+    border-top: solid 3px #668b0a
+    padding: 50px 0 0
+    text-align: center
+    &__item
+      max-width: 752px
+      margin: 0 auto
+  &__logo
+    margin: 0 0 30px
+  &__pages
+    display: flex
+    justify-content: space-between
+    margin: 0 0 30px
+  &__link
+    font-size: 16px
+    color: #fff
+  &__descr
+    font-size: 14px
+    line-height: normal
+    margin: 0 0 10px
+  &__prod
+    font-size: 14px
+    font-weight: 500
+    margin: 0 0 30px
+  &__copyr
+    font-size: 14px
+    margin: 0 0 30px
+  &__support
+    font-size: 20px
+    margin: 0 0 20px
+    font-weight: 500
+    text-transform: uppercase
+  &__icons
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+      max-width: 82px
+      margin: 0 15px
