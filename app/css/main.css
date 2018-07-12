@@ -1597,61 +1597,6 @@ header {
   margin: 0;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after {
-  content: '';
-  content: none;
-}
-
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-a, a:hover, a:active, a:link {
-  text-decoration: none;
-  outline: none;
-}
-
 .container {
   padding: 0 24px;
 }
@@ -2291,4 +2236,98 @@ a, a:hover, a:active, a:link {
 .footerS__icons img {
   max-width: 82px;
   margin: 0 15px;
+}
+
+.links__item-opa {
+  color: #79a50b;
+}
+
+.footer-forms-nav {
+  border-top: solid 2px #6c6c6c;
+  padding: 50px 0;
+}
+
+.footer-forms-nav nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.footer-forms-nav nav a {
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #4a306d;
+  margin: 0 7px;
+}
+
+.cart-form h3 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: normal;
+  color: #303030;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.cart-form .field-wrap {
+  border-radius: 10px;
+  border: solid 1px #6c6c6c;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.cart-form .field-wrap label {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.cart-form .field-wrap input {
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.94em 0.8em;
+  word-break: normal;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.cart-form-information {
+  padding-bottom: 14px;
+}
+
+.cart-form-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.cart-form-flex-left {
+  max-width: 560px;
+  width: 100%;
+}
+
+.cart-form-flex-right {
+  max-width: 464px;
+  width: 100%;
 }
