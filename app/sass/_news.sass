@@ -46,3 +46,66 @@ $textBlack: #303030
       line-height: 31px
       &:last-child
         margin: 0
+  &-slider
+    padding: 0 0 100px
+    color: #6c6c6c
+    .news__date-descr
+      margin: 50px 0 0
+    .news__content-subtitle
+      font-size: 24px
+      color: $textBlack
+      margin: 0 0 30px
+      padding-top: 50px
+      border-top: solid 3px #668b0a
+    &__row
+      margin: 0 -8px
+      display: flex
+      flex-wrap: wrap
+      padding: 
+    &__col
+      width: 33.333333333%
+      padding: 0 8px
+    &__item
+      height: 100%
+    &__img
+      min-height: 320px
+      background-image: url('../img/slider.jpg')
+      background-size: cover
+      background-position: center
+      margin: 0 0 20px
+      padding: 25px 20px 39px
+      text-align: center
+      &_1
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        padding-right: 140px
+        text-align: left
+      &-text
+        font-size: 40px
+        font-weight: 700
+        color: #fff
+        text-shadow: 0 3px 7px #000000
+    &__title
+      color: $textBlack
+      font-weight: 600
+      font-size: 24px
+      margin: 0 0 15px
+    &__descr
+      font-size: 17px
+      font-weight: 300
+      line-height: normal
+      margin: 0 0 30px
+    &-btn
+      display: inline-block
+      font-size: 18px
+      text-transform: uppercase
+      color: $textColor
+      border: solid 2px #4a306d
+      border-radius: 50px
+      padding: 14px 31px
+      font-weight: 600
+      transition: background 300ms, color 300ms
+      &:hover
+        color: #ffffff
+        background-color: $btnColor

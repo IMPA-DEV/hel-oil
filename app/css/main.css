@@ -208,7 +208,7 @@ a.btn:hover {
   text-align: center;
 }
 
-header {
+.main-header {
   background-image: url("../img/bg/bg_header.png");
   background-size: cover;
   background-position: center;
@@ -1547,6 +1547,106 @@ header {
   margin: 0;
 }
 
+.news-slider {
+  padding: 0 0 100px;
+  color: #6c6c6c;
+}
+
+.news-slider .news__date-descr {
+  margin: 50px 0 0;
+}
+
+.news-slider .news__content-subtitle {
+  font-size: 24px;
+  color: #303030;
+  margin: 0 0 30px;
+  padding-top: 50px;
+  border-top: solid 3px #668b0a;
+}
+
+.news-slider__row {
+  margin: 0 -8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.news-slider__col {
+  width: 33.333333333%;
+  padding: 0 8px;
+}
+
+.news-slider__item {
+  height: 100%;
+}
+
+.news-slider__img {
+  min-height: 320px;
+  background-image: url("../img/slider.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 0 0 20px;
+  padding: 25px 20px 39px;
+  text-align: center;
+}
+
+.news-slider__img_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-right: 140px;
+  text-align: left;
+}
+
+.news-slider__img-text {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 3px 7px #000000;
+}
+
+.news-slider__title {
+  color: #303030;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0 0 15px;
+}
+
+.news-slider__descr {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0 0 30px;
+}
+
+.news-slider-btn {
+  display: inline-block;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #4a306d;
+  border: solid 2px #4a306d;
+  border-radius: 50px;
+  padding: 14px 31px;
+  font-weight: 600;
+  -webkit-transition: background 300ms, color 300ms;
+  -o-transition: background 300ms, color 300ms;
+  transition: background 300ms, color 300ms;
+}
+
+.news-slider-btn:hover {
+  color: #ffffff;
+  background-color: #4a306d;
+}
+
 .page-sect {
   padding: 125px 0 100px;
 }
@@ -1595,61 +1695,6 @@ header {
 
 .contact-page .page-block:last-child {
   margin: 0;
-}
-
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after {
-  content: '';
-  content: none;
-}
-
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-a, a:hover, a:active, a:link {
-  text-decoration: none;
-  outline: none;
 }
 
 .container {
@@ -1809,13 +1854,13 @@ a, a:hover, a:active, a:link {
   z-index: 21;
 }
 
-.header {
+.headerS {
   padding: 35px 0;
   background-image: url("../img/shop/home-bg.jpg");
   min-height: 1px;
 }
 
-.header__row {
+.headerS__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1827,7 +1872,7 @@ a, a:hover, a:active, a:link {
   align-items: flex-start;
 }
 
-.header__nav {
+.headerS__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1836,7 +1881,7 @@ a, a:hover, a:active, a:link {
   align-items: center;
 }
 
-.header__btn {
+.headerS__btn {
   background-color: transparent;
   border: solid 2px #ffffff;
   padding: 15px 43px;
@@ -1845,11 +1890,11 @@ a, a:hover, a:active, a:link {
   margin: 0 45px 0 0;
 }
 
-.header__btn:hover {
+.headerS__btn:hover {
   background-color: #4a306d;
 }
 
-.header__title {
+.headerS__title {
   font-weight: 500;
   font-size: 24px;
   margin: 20px 0 0;
