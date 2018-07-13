@@ -46,7 +46,7 @@ $(document).ready(function(){
 
     /* nav */
     $('.nav-btn').click(function () {
-        $('.headerH__nav').fadeToggle();
+        $('.header__nav').fadeToggle();
         $('.nav-btn').toggle();
         $("html,body").toggleClass('hidden')
     });
