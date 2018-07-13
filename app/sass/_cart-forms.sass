@@ -48,6 +48,47 @@
       border: none
       font-size: 18px
       line-height: 1
+  &-discount,
+  &-coast,
+  &-product,
+  &-total
+    border-bottom: solid 2px #6c6c6c
+    padding: 30px 0
+  &-product
+    padding-top: 0
+  &-total
+    border: none
+  &-page
+    padding-bottom: 50px
+  &-btn
+    font-family: $fonts_Roboto
+    font-size: 32px
+    font-weight: 500
+    text-align: center
+    text-transform: uppercase
+    color: #fff
+    background-color: $color_main
+    border-radius: 20px
+    display: inline-block
+    padding: 10px 29px
+    transition: 0.3s
+    &:hover
+      background-color: #79a50b
+      color: #fff
+      transition: 0.3s
+    span
+      display: block
+      font-size: 20px
+      padding-top: 6px
+  &-please
+    font-size: 14px
+    font-weight: normal
+    font-style: italic
+    font-stretch: normal
+    line-height: normal
+    letter-spacing: normal
+    text-align: right
+    color: #6c6c6c
   &-information
     padding-bottom: 14px
   &-flex
@@ -56,6 +97,76 @@
     &-left
       max-width: 560px
       width: 100%
+      .btn-right
+        text-align: right
+        margin: 30px 0
     &-right
       max-width: 464px
       width: 100%
+    &-input
+      display: flex
+      justify-content: space-between
+      &.c-2 > *
+        width: 48.5%
+      &.c-3 > *
+        width: 31%
+  &-apply
+    font-family: $fonts_Roboto
+    font-size: 20px
+    font-weight: 500
+    font-style: normal
+    font-stretch: normal
+    letter-spacing: normal
+    text-align: center
+    color: #fff
+    text-transform: uppercase
+    border-radius: 10px
+    background-color: #6c6c6c
+    display: inline-block
+    line-height: 56px
+    width: 176px
+    transition: 0.3s
+    &:hover
+      background-color: $color_main
+      transition: 0.3s
+  &-coast
+    p
+      font-size: 18px
+      font-weight: 500
+      font-style: normal
+      font-stretch: normal
+      line-height: 1
+      letter-spacing: normal
+      text-align: left
+      color: #303030
+      display: flex
+      justify-content: space-between
+      align-items: center
+      &:first-child
+        padding-bottom: 20px
+      span
+        font-size: 14px
+        font-weight: 600
+  &-total
+    p
+      font-size: 20px
+      font-weight: 500
+      font-style: normal
+      font-stretch: normal
+      line-height: normal
+      letter-spacing: normal
+      color: #303030
+      display: flex
+      justify-content: space-between
+      align-items: center
+      span
+        font-size: 24px
+        font-weight: 600
+
+.discount-flex
+  display: flex
+  justify-content: space-between
+  .field-wrap
+    margin: 0
+    width: 100%
+    margin-right: 16px
