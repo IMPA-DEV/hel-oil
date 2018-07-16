@@ -20,6 +20,9 @@
         margin: 0 7px
 
 .cart-form
+  display: none
+  &.active
+    display: block
   h3
     font-size: 20px
     font-weight: 500
@@ -33,6 +36,8 @@
     position: relative
     overflow: hidden
     margin-bottom: 20px
+    &:focus
+      box-shadow: 0 0 0 2px #803087
     label
       position: absolute
       opacity: 0
@@ -50,12 +55,29 @@
       line-height: 1
   &-discount,
   &-coast,
-  &-product,
   &-total
     border-bottom: solid 2px #6c6c6c
     padding: 30px 0
   &-product
     padding-top: 0
+    &-package
+      font-size: 14px
+      font-weight: 500
+      font-style: normal
+      font-stretch: normal
+      line-height: normal
+      letter-spacing: normal
+      color: #303030
+      display: flex
+      align-items: center
+      justify-content: space-between
+      border-bottom: solid 2px #6c6c6c
+      padding: 30px 0
+      &:first-child
+        padding-top: 0
+      &>*
+        display: flex
+        align-items: center
   &-total
     border: none
   &-page
@@ -280,3 +302,57 @@
       font-size: 18px
       color: #4a306d
       margin: 0 15px
+
+.product-package
+  &-num
+    padding-right: 45px
+    padding-left: 15px
+    font-size: 20px
+    font-weight: 600
+    font-style: normal
+    font-stretch: normal
+    line-height: normal
+    letter-spacing: normal
+    color: #6c6c6c
+    span
+      cursor: pointer
+    .num-min
+      position: relative
+      top: -1px
+      &+ span
+        width: 25px
+        text-align: center
+        display: inline-block
+        cursor: auto
+  &-wrap
+    max-width: 250px
+    p
+      padding-left: 10px
+  &-dollar
+    font-weight: 600
+    p
+      width: 60px
+      text-align: right
+  &-img
+    height: 102px
+    position: relative
+    display: inline-block
+    span
+      position: absolute
+      top: 0
+      right: -26px
+      background-color: $color_main
+      border-radius: 50%
+      width: 20px
+      height: 20px
+      display: block
+      color: #fff
+      line-height: 20px
+      text-align: center
+    img
+      width: auto
+      height: inherit
+      display: block
+
+.links__item-opa.active
+  color: #303030

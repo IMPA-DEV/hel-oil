@@ -35,13 +35,13 @@
   <section class="links" id="links">
     <div class="container">
       <div class="links__item">
-        <a class="links__item-home" href="/">products</a>
+        <a class="links__item-home" href="card.html">products</a>
         <div class="links__item-arr"></div>
-        <span class="links__item-act">customer information</span>
+        <span class="links__item-opa opa-1 active">customer information</span>
         <div class="links__item-arr"></div>
-        <span class="links__item-opa">shipping method</span>
+        <span class="links__item-opa opa-2">shipping method</span>
         <div class="links__item-arr"></div>
-        <span class="links__item-opa">payment method</span>
+        <span class="links__item-opa opa-3">payment method</span>
       </div>
     </div>
   </section>
@@ -56,7 +56,7 @@
           <!--left block-->
           <div class="cart-form-flex-left">
             <!--customer information-->
-            <div class="cart-form form-1">
+            <div id="cart-form-1" class="cart-form form-1 active">
               <form>
                 <div class="cart-form-information">
                   <h3>Contact Information</h3>
@@ -206,7 +206,7 @@
                   </div>
 
                   <div class="btn btn-right">
-                    <a class="cart-form-btn" href="#">Submit
+                    <a class="cart-form-btn next-form-2" href="#links">Submit
                       <span>Continue to shipping method</span>
                     </a>
                   </div>
@@ -217,33 +217,33 @@
             </div>
 
             <!--shipping method-->
-            <div class="cart-form form-2">
+            <div id="cart-form-2" class="cart-form form-2">
               <form>
                 <div class="field-wrap">
                   <p>Shipping Address</p>
                   <input type="text" readonly value="6 street AR 34567, United States">
-                  <a href="#">Edit</a>
+                  <a href="#cart-form-1">Edit</a>
                 </div>
 
                 <h3>Shipping Method</h3>
                 <div class="field-wrap">
                   <input type="text" readonly value="USPS First Class Shipping">
-                  <a href="#">Free</a>
+                  <a href="#cart-form-1">Free</a>
                 </div>
 
                 <div class="btn btn-right">
-                  <a class="cart-form-btn" href="#">Submit
+                  <a class="cart-form-btn next-form-3" href="#links">Submit
                     <span>Continue to shipping method</span>
                   </a>
                 </div>
                 <span class="cart-form-please">Please note some customers may experience an international transaction fee</span>
-                <a href="#" class="back-to">
+                <a href="#links" class="back-to prev-form-1">
                   <span></span>Return to customer information</a>
               </form>
             </div>
 
             <!--payment method-->
-            <div class="cart-form form-3">
+            <div id="cart-form-3" class="cart-form form-3">
               <form>
                 <div class="cart-form-shipping">
                   <div class="field-wrap">
@@ -301,7 +301,7 @@
                     </div>
                     <div class="field-wrap radio-cart">
                       <input type="radio" id="choice2" name="contact" value="Same as shipping address">
-                      <label for="choice2">Same as shipping address</label>
+                      <label for="choice2">Use a different billing address</label>
                     </div>
                     <div class="billing-cart">
                       <!-- cart form-->
@@ -448,7 +448,7 @@
                 </div>
 
                 <span class="cart-form-please">Please note some customers may experience an international transaction fee</span>
-                <a href="#" class="back-to">
+                <a href="#links" class="back-to prev-form-2">
                   <span></span>Return to shipping method</a>
               </form>
             </div>
@@ -458,6 +458,64 @@
           <div class="cart-form-flex-right">
             <div class="cart-form-product">
 
+                <div class="cart-form-product-package">
+                    <div class="product-package-wrap">
+                        <div class="product-package-img" id="product-package-1">
+                            <img id="package-img" src="img/package-1.png" alt=""><span id="package-sum"></span>
+                        </div>
+                        <p id="package-name"></p>
+                    </div>
+                    <div class="product-package-num-wrap">
+                        <!--<div class="product-package-num">-->
+                            <!--<span class="num-min">-</span>-->
+                            <!--<span id="num-sel-1">10</span>-->
+                            <!--<span class="num-max">+</span>-->
+                        <!--</div>-->
+                        <div class="product-package-dollar">
+                            <p>$<span id="package-total"></span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="cart-form-product-package">-->
+                    <!--<div class="product-package-wrap">-->
+                        <!--<div class="product-package-img" id="product-package-2">-->
+                            <!--<img src="img/package-2.png" alt=""><span id="package-sum-2">4</span>-->
+                        <!--</div>-->
+                        <!--<p>Best Value Package</p>-->
+                    <!--</div>-->
+
+                    <!--<div class="product-package-num-wrap">-->
+                        <!--<div class="product-package-num">-->
+                            <!--<span class="num-min">-</span>-->
+                            <!--<span id="num-sel-2">5</span>-->
+                            <!--<span class="num-max">+</span>-->
+                        <!--</div>-->
+                        <!--<div class="product-package-dollar">-->
+                            <!--<p>$<span id="package-dollar-2">99.98</span></p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="cart-form-product-package">-->
+                    <!--<div class="product-package-wrap">-->
+                        <!--<div class="product-package-img" id="product-package-3">-->
+                            <!--<img src="img/package-3.png" alt=""><span id="package-sum-3">1</span>-->
+                        <!--</div>-->
+                        <!--<p>Most Popular Package</p>-->
+                    <!--</div>-->
+
+                    <!--<div class="product-package-num-wrap">-->
+                        <!--<div class="product-package-num">-->
+                            <!--<span class="num-min">-</span>-->
+                            <!--<span id="num-sel-3">1</span>-->
+                            <!--<span class="num-max">+</span>-->
+                        <!--</div>-->
+                        <!--<div class="product-package-dollar">-->
+                            <!--<p>$<span id="package-dollar-3">113.97</span></p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
             </div>
 
             <!-- Discount-->
@@ -491,6 +549,7 @@
 
         </div>
       </div>
+
       <!-- summary  block -->
       <div class="summary">
         <h3 class="summary__title">Thank you for your order, First Name</h3>
@@ -516,13 +575,13 @@
 
             <div class="summ-order__row">
               <div class="summ-order__col">
-                <p class="summ-order__text summ-order__prod">Product</p>
+                <p class="summ-order__text summ-order__prod" id="summ-product">Product</p>
               </div>
               <div class="summ-order__col">
-                <p class="summ-order__text">$00.00</p>
+                <p class="summ-order__text" id="summ-price">$00.00</p>
               </div>
               <div class="summ-order__col">
-                <p class="summ-order__text">$00.00</p>
+                <p class="summ-order__text" id="summ-sh">$00.00</p>
               </div>
               <div class="summ-order__col"></div>
             </div>
@@ -532,7 +591,7 @@
               <div class="summ-order__col"></div>
               <div class="summ-order__col"></div>
               <div class="summ-order__col">
-                <p class="summ-order__total">$00.00</p>
+                <p class="summ-order__total" id="summ-total">$00.00</p>
               </div>
             </div>
           </div>
@@ -628,6 +687,7 @@
         </div>
 
       </div>
+
     </div>
   </section>
 
@@ -647,6 +707,11 @@
     </div>
   </footer>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="libs/animate/animate-css.js"></script>
+  <script src="libs/waypoints/waypoints.min.js"></script>
+  <script src="libs/jparallax/js/jquery.event.frame.js"></script>
+  <script src="libs/jparallax/js/jquery.parallax.min.js"></script>
   <script src="js/common.js"></script>
 </body>
 

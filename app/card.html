@@ -105,9 +105,9 @@
           </div>
           <div class="card-pack__images">
             <div class="card-pack__images-buttons">
-              <div class="card-pack__images-link card-active" style="background-image: url('/img/shop/1.png')"></div>
-              <div class="card-pack__images-link" style="background-image: url('/img/shop/2.png')"></div>
-              <div class="card-pack__images-link" style="background-image: url('/img/shop/3.png')"></div>
+              <div class="card-pack__images-link cart-pack-3-1 card-active" data-image="3"  data-name="Most Popular Package" data-sum="113.97" data-shipping="Free" style="background-image: url('/img/shop/1.png')"></div>
+              <div class="card-pack__images-link cart-pack-1-1"  data-image="2" data-name="Best Value Package" data-sum="99.98" data-shipping="Free" style="background-image: url('/img/shop/2.png')"></div>
+              <div class="card-pack__images-link cart-pack-1"  data-image="1" data-name="Sampler Package" data-sum="69.99" data-shipping="5" style="background-image: url('/img/shop/3.png')"></div>
             </div>
             <img class="card-pack__images-img card-active" src="/img/shop/1.png" alt="" />
             <img class="card-pack__images-img" src="/img/shop/2.png" alt="" />
@@ -160,8 +160,9 @@
             </div>
           </div>
           <h3 class="card-pack__package-quantity">Quantity
-            <select name="quantity">
-              <option value="1" selected="selected">1</option>
+            <select name="quantity" id="select-quantity" data-quantity="quantity" class="card-pack__package-select">
+              <option value="0" selected="selected">0</option>
+              <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
@@ -173,7 +174,7 @@
               <option value="10">10</option>
             </select>
           </h3>
-          <a class="shop-btn card-pack__btn" href="cart-forms.html">add to cart</a>
+          <a id="addCart" class="shop-btn card-pack__btn" href="cart-forms.html">add to cart</a>
         </div>
       </div>
     </div>
