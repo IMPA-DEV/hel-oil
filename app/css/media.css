@@ -810,4 +810,40 @@
   .footerS__btn {
     background-size: contain;
   }
+  .summary__title {
+    font-size: 26px;
+    margin: 0 0 40px;
+  }
+  .summary .summ-table {
+    margin: 0 0 30px;
+  }
+  .summary .summ-table__title {
+    font-size: 18px;
+    padding: 16px 10px;
+  }
+  .summary .summ-table__container {
+    padding: 19px 10px 40px;
+  }
+  .summary .summ-order__row, .summary .summ-info__row {
+    padding: 7px 0;
+  }
+  .summary .summ-order__name {
+    font-size: 16px;
+  }
+  .summary .summ-order__text {
+    font-size: 13px;
+  }
+  .summary .summ-order__prod {
+    font-size: 15px;
+  }
+  .summary .summ-order__total {
+    font-size: 14px;
+    line-height: 23px;
+  }
+  .summary .summ-info__name {
+    font-size: 16px;
+  }
+  .summary .summ-info__text {
+    font-size: 14px;
+  }
 }

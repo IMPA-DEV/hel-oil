@@ -1,0 +1,83 @@
+// variables
+$robotoFont: 'Roboto', sans-serif
+$montFont: 'Montserrat', sans-serif
+$textColor: #4a306d
+$textBlack: #303030
+
+.summary
+  &__title
+    font-weight: 500
+    font-size: 36px
+    letter-spacing: 0.5px
+    color: $textBlack
+    margin: 0 0 80px
+    text-align: center
+  .summ-table
+    max-width: 655px
+    margin: 0 auto 50px
+    background-color: rgba(255, 255, 255, 0.25)
+    box-shadow: 0 2px 3px 0 rgba(108, 108, 108, 0.5)
+    border-radius: 10px
+    color: $textBlack
+    &:last-child
+      margin: 0 auto
+    &__title
+      background-color: #4a306d
+      padding: 16px 48px
+      text-align: center
+      color: #fff
+      font-weight: 500
+      font-size: 24px
+      border-top-left-radius: 10px
+      border-top-right-radius: 10px
+    &__container
+      padding: 19px 48px 50px
+      display: flex
+      flex-direction: column
+  .summ-order
+    &__row
+      display: flex
+      margin: 0 -5px
+      align-items: center
+      padding: 10px 0
+      border-bottom: solid 2px rgba(108, 108, 108, 0.5)
+    &__col
+      padding: 0 5px
+      width: 20%
+      &:first-child
+        width: 40%
+      &:last-child
+        text-align: right
+    &__name
+      font-size: 20px
+      font-weight: 500
+    &__text
+      font-size: 14px
+      font-weight: 600
+    &__prod
+      font-weight: 400
+      font-size: 16px
+      line-height: 23px
+      color: #6c6c6c
+      opacity: 0.8
+    &__total
+      font-size: 24px
+      font-weight: 600
+  .summ-info
+    &__row
+      @extend .summ-order__row
+    &__col
+      padding: 0 5px
+      &:first-child
+        width: 45%
+      &:last-child
+        width: 55%
+    &__name
+      font-weight: 500
+      font-size: 20px
+    &__text
+      font-size: 16px
+      line-height: 23px
+      color: #6c6c6c
+      opacity: 0.8
+      

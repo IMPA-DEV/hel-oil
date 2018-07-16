@@ -2767,3 +2767,120 @@ a.btn:hover {
   color: #4a306d;
   margin: 0 15px;
 }
+
+.summary__title {
+  font-weight: 500;
+  font-size: 36px;
+  letter-spacing: 0.5px;
+  color: #303030;
+  margin: 0 0 80px;
+  text-align: center;
+}
+
+.summary .summ-table {
+  max-width: 655px;
+  margin: 0 auto 50px;
+  background-color: rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0 2px 3px 0 rgba(108, 108, 108, 0.5);
+  box-shadow: 0 2px 3px 0 rgba(108, 108, 108, 0.5);
+  border-radius: 10px;
+  color: #303030;
+}
+
+.summary .summ-table:last-child {
+  margin: 0 auto;
+}
+
+.summary .summ-table__title {
+  background-color: #4a306d;
+  padding: 16px 48px;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  font-size: 24px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.summary .summ-table__container {
+  padding: 19px 48px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.summary .summ-order__row, .summary .summ-info__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -5px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: solid 2px rgba(108, 108, 108, 0.5);
+}
+
+.summary .summ-order__col {
+  padding: 0 5px;
+  width: 20%;
+}
+
+.summary .summ-order__col:first-child {
+  width: 40%;
+}
+
+.summary .summ-order__col:last-child {
+  text-align: right;
+}
+
+.summary .summ-order__name {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.summary .summ-order__text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.summary .summ-order__prod {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #6c6c6c;
+  opacity: 0.8;
+}
+
+.summary .summ-order__total {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.summary .summ-info__col {
+  padding: 0 5px;
+}
+
+.summary .summ-info__col:first-child {
+  width: 45%;
+}
+
+.summary .summ-info__col:last-child {
+  width: 55%;
+}
+
+.summary .summ-info__name {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.summary .summ-info__text {
+  font-size: 16px;
+  line-height: 23px;
+  color: #6c6c6c;
+  opacity: 0.8;
+}
