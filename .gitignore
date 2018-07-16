@@ -1,5 +1,10 @@
 # phpstorm project files
 .idea
 .node_modules
+<<<<<<< HEAD
 /idea
 /node_modules
+=======
+/node_modules
+/idea
+>>>>>>> 3c93b59a81b3f617988041ee3d193aaa522bb94a
