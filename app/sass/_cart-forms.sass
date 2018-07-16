@@ -72,6 +72,10 @@
     display: inline-block
     padding: 10px 29px
     transition: 0.3s
+    border: none
+    min-height: 78px
+    max-width: 378px
+    width: 100%
     &:hover
       background-color: #79a50b
       color: #fff
@@ -89,6 +93,70 @@
     letter-spacing: normal
     text-align: right
     color: #6c6c6c
+  &-check
+    margin-bottom: 30px
+    margin-top: 10px
+    label
+      font-size: 16px
+      color: #6c6c6c
+  &-billing
+    .field-wrap.radio-cart
+      display: flex
+      align-items: center
+      margin: 0
+      border-radius: 0px
+      padding: 15px 13px
+      &:first-child
+        border-radius: 10px 10px 0 0
+        border-bottom: none
+      input
+        width: auto
+        outline: none
+      label
+        position: static
+        opacity: 1
+        color: #303030
+        padding-left: 10px
+  &-shipping
+    border-radius: 10px
+    border: solid 1px #6c6c6c
+    position: relative
+    overflow: hidden
+    margin-bottom: 30px
+    .field-wrap
+      margin: 0
+      border: none
+      border-radius: 0
+      display: flex
+      align-items: center
+      padding: 0 15px
+      p
+        font-size: 18px
+        color: #303030
+      input
+        font-size: 18px
+        color: #6c6c6c
+        max-width: 325px
+        padding: 0.54em 0.8em
+      a
+        font-size: 18px
+        color: #4a306d
+      &:first-child
+        border-bottom: solid 2px #6c6c6c
+  &-payment
+    h3
+      margin: 0
+    p
+      font-size: 16px
+      font-weight: normal
+      font-style: normal
+      font-stretch: normal
+      line-height: normal
+      letter-spacing: normal
+      text-align: left
+      color: #6c6c6c
+      margin-bottom: 20px
+      margin-top: 5px
   &-information
     padding-bottom: 14px
   &-flex
@@ -162,6 +230,11 @@
       span
         font-size: 24px
         font-weight: 600
+  .billing-cart
+    border: solid 1px #6c6c6c
+    border-top: none
+    padding: 10px
+    background-color: rgba(255, 255, 255, 0.25)
 
 .discount-flex
   display: flex
@@ -170,3 +243,40 @@
     margin: 0
     width: 100%
     margin-right: 16px
+
+.back-to
+  font-size: 14px
+  font-weight: normal
+  font-style: normal
+  font-stretch: normal
+  line-height: normal
+  letter-spacing: normal
+  text-align: left
+  color: #4a306d
+  margin-top: 10px
+  display: inline-block
+  span
+    background-image: url("../img/back-to.svg")
+    width: 7px
+    height: 13px
+    background-position: center
+    display: inline-block
+    margin-right: 10px
+
+.form-2
+  .field-wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &:first-child
+      margin-bottom: 30px
+    p
+      font-size: 18px
+      color: #303030
+      max-width: 180px
+      width: 100%
+      padding-left: 15px
+    a
+      font-size: 18px
+      color: #4a306d
+      margin: 0 15px
