@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="81px" height="80px" viewBox="0 0 81 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>A64E94B3-B36F-4A0D-BAA3-37203ACE78CC</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <text id="text-1" font-family="Catamaran-ExtraBold, Catamaran" font-size="11" font-weight="600" letter-spacing="-0.0329999998" fill="#FFFFFF">
+            <tspan x="14" y="30">YOU SAVE</tspan>
+        </text>
+        <filter x="-13.2%" y="-27.8%" width="126.4%" height="177.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Heleaf-drops-(2)(shop-now)-(v0.2)" transform="translate(-640.000000, -1570.000000)">
+            <g id="body" transform="translate(0.000000, 88.000000)">
+                <g id="2" transform="translate(304.000000, 1381.000000)">
+                    <g id="Group-39" transform="translate(283.000000, 101.000000)">
+                        <g id="Group-5" transform="translate(53.000000, 0.000000)">
+                            <g id="Group-6">
+                                <polygon id="Star" fill="#4A306D" points="40.7473108 74.6204426 35.7359996 79.6525108 32.1335524 73.5322719 26.0282563 77.1599859 24.0610281 70.3361334 17.2453653 72.3315507 17.0369643 65.2328524 9.93918797 65.4705936 11.5027088 58.5430866 4.56879832 57.0082136 7.80599919 50.6871788 1.47163767 47.4761332 6.17911334 42.1587445 0.842311998 37.4732881 6.72427446 33.4936566 2.72036416 27.6281939 9.40722808 25.2363744 6.98778924 18.559454 14.0593944 17.9057333 13.3764492 10.8368907 20.3884606 11.9623445 21.4849211 4.94574107 27.9967482 7.77965301 30.8037197 1.25616768 36.4062006 5.62047262 40.7473108 0 45.0884209 5.62047262 50.6909018 1.25616768 53.4978733 7.77965301 60.0097005 4.94574107 61.106161 11.9623445 68.1181723 10.8368907 67.4352272 17.9057333 74.5068323 18.559454 72.0873935 25.2363744 78.7742574 27.6281939 74.7703471 33.4936566 80.6523096 37.4732881 75.3155082 42.1587445 80.0229839 47.4761332 73.6886224 50.6871788 76.9258232 57.0082136 69.9919128 58.5430866 71.5554336 65.4705936 64.4576572 65.2328524 64.2492563 72.3315507 57.4335935 70.3361334 55.4663653 77.1599859 49.3610692 73.5322719 45.758622 79.6525108"></polygon>
+                                <g id="You-save" fill="#FFFFFF" fill-opacity="1">
+                                    <use filter="url(#filter-2)" xlink:href="#text-1"></use>
+                                    <use xlink:href="#text-1"></use>
+                                </g>
+                                <text id="$40" font-family="Roboto-Bold, Roboto" font-size="32" font-weight="bold" fill="#FFFFFF">
+                                    <tspan x="13" y="59">$40</tspan>
+                                </text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
