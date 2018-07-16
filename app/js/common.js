@@ -1,8 +1,4 @@
 $(document).ready(function(){
-    /* parallax */
-    $( '.parallax-layer' ).parallax({
-        mouseport: $('#parallax')
-    });
 
     //slick-slider
     $('#news-slider').slick({
