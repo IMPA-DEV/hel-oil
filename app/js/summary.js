@@ -1,0 +1,26 @@
+var sumProduct = localStorage.getItem('name');
+var sumPrice = localStorage.getItem('subtotal');
+var sumTotal = localStorage.getItem('subtotal');
+var sumFirstName = localStorage.getItem('firstName');
+var sumLastName = localStorage.getItem('lastName');
+var sumApartment = localStorage.getItem('apartment');
+var sumAddress = localStorage.getItem('address');
+var sumCountry = localStorage.getItem('country');
+var sumCity = localStorage.getItem('city');
+var sumState = localStorage.getItem('state');
+var sumZip = localStorage.getItem('zip');
+var sumPhone = localStorage.getItem('phone');
+var sumEmail = localStorage.getItem('email');
+
+$('#summ-product').html(sumProduct);
+$('#summ-price').html('$' + sumPrice);
+$('#summ-total').html('$' + sumTotal);
+$('#summ-FirstName').html(sumFirstName);
+$('#summ-LastName').html(sumLastName);
+$('#summ-Address').html(sumCountry +' ' + sumAddress);
+$('#summ-Apartment').html(sumApartment);
+$('#summ-City').html(sumCity);
+$('#summ-State').html(sumState);
+$('#summ-Zip').html(sumZip);
+$('#summ-Phone').html(sumPhone);
+$('#summ-Email').html(sumEmail);
