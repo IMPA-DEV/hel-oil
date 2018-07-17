@@ -132,6 +132,13 @@ $(document).ready(function(){
     });
   }
 
+  /* Toggle dop form "Use a different billing address" */
+    $('input[name=contact]').on('click', function () {
+      if($('input[value=open]:checked')){
+          $('.billing-cart').fadeToggle(300);
+      }
+    });
+
 
   /* form next */
     $('.next-form-2').on('click', function () {
@@ -170,10 +177,14 @@ $(document).ready(function(){
         $(this).addClass('cart-sel')
     });
 
-
     var addCart = document.getElementById('addCart');
-
     $(addCart).on('click', function (e) {
+        if($('#select-quantity').val() == 0){
+            e.preventDefault();
+            $('#select-quantity').css('border-color','red');
+            return false
+        }
+
         var cardActive = document.querySelector('.cart-sel');
 
         var dataQuantity = $('#select-quantity').val();
@@ -189,16 +200,107 @@ $(document).ready(function(){
         localStorage.setItem('quantity', dataQuantity);
     });
 
-    var packageImg = localStorage.setItem('image');
-    var packageSum = localStorage.setItem('sum');
-    var packageName = localStorage.setItem('name');
-    var packageTotal = localStorage.setItem('shipping', dataShipping)*localStorage.setItem('quantity', dataQuantity);
+    var packageImg = localStorage.getItem('image');
+    var packageSum = localStorage.getItem('sum');
+    var packageName = localStorage.getItem('name');
+    var packageShipping = localStorage.getItem('shipping');
+    var packageQuantity = localStorage.getItem('quantity');
 
-    $('#package-name').innerText(packageName)
-    $('#package-sum').innerText(packageSum)
+    if(packageImg == 1){
+        $('#package-img').attr('src','img/package-1.png')
+    } else if (packageImg == 2){
+        $('#package-img').attr('src','img/package-2.png')
+    } else {
+        $('#package-img').attr('src','img/package-3.png')
+    }
+
+    var subtotal = packageSum*packageQuantity;
+    var subtotal = subtotal.toFixed(2);
+
+    if(packageShipping > 1){
+        $('#shipping').html('$'+ packageShipping);
+        $('#total').html('$' + subtotal + packageShipping);
+    } else{
+        $('#shipping').html(packageShipping);
+        $('#total').html('$' + subtotal);
+    }
+
+    $('#package-name').html(packageName);
+    $('#package-quantity').html(packageQuantity);
+    $('#package-sum').html(packageSum);
+    $('#subtotal').html(subtotal);
+
+    /* Cart Form #1 */
+    $('.next-form-2').on('click', function () {
+        var cardEmail      = $('.formEmail').val();
+        var cardFirstName  = $('.formFirstName').val();
+        var cardLastName   = $('.formLastName').val();
+        var cardCompany    = $('.formCompany').val();
+        var cardAddress    = $('.formAddress').val();
+        var cardApartment  = $('.formApartment').val();
+        var cardCity       = $('.formCity').val();
+        var cardCountry    = $('.formCountry').val();
+        var cardState      = $('.formState').val();
+        var cardZip        = $('.formZip').val();
+        var cardPhone      = $('.formPhone').val();
+
+        localStorage.setItem('subtotal', subtotal);
+        localStorage.setItem('email', cardEmail);
+        localStorage.setItem('firstName', cardFirstName);
+        localStorage.setItem('lastName', cardLastName);
+        localStorage.setItem('company', cardCompany);
+        localStorage.setItem('address', cardAddress);
+        localStorage.setItem('apartment', cardApartment);
+        localStorage.setItem('city', cardCity);
+        localStorage.setItem('country', cardCountry);
+        localStorage.setItem('state', cardState);
+        localStorage.setItem('zip', cardZip);
+        localStorage.setItem('phone', cardPhone);
+
+        /* Cart Form #2 Shipping Method */
+        var formAddress  = localStorage.getItem('address');
+        var formShipping = localStorage.getItem('shipping');
+        var formCountry  = localStorage.getItem('country');
 
 
+        $('.shipAddress').val(formAddress);
+        $('.shipShipping').html(formShipping);
 
+        /* Cart #3 Payment Method */
+        var payAddress = formAddress + ', ' + formCountry;
+        var payShipping = 'USPS First Class Shipping · ' + formShipping;
+
+        $('.payAddress').val(payAddress);
+        $('.payShipping').val(payShipping);
+    });
+
+    /* summery page */
+    var sumProduct = localStorage.getItem('name');
+    var sumPrice = localStorage.getItem('subtotal');
+    var sumTotal = localStorage.getItem('subtotal');
+    var sumFirstName = localStorage.getItem('firstName');
+    var sumLastName = localStorage.getItem('lastName');
+    var sumApartment = localStorage.getItem('apartment');
+    var sumAddress = localStorage.getItem('address');
+    var sumCountry = localStorage.getItem('country');
+    var sumCity = localStorage.getItem('city');
+    var sumState = localStorage.getItem('state');
+    var sumZip = localStorage.getItem('zip');
+    var sumPhone = localStorage.getItem('phone');
+    var sumEmail = localStorage.getItem('email');
+
+    $('#summ-product').html(sumProduct);
+    $('#summ-price').html('$' + sumPrice);
+    $('#summ-total').html('$' + sumTotal);
+    $('#summ-FirstName').html(sumFirstName);
+    $('#summ-LastName').html(sumLastName);
+    $('#summ-Address').html(sumCountry +' ' + sumAddress);
+    $('#summ-Apartment').html(sumApartment);
+    $('#summ-City').html(sumCity);
+    $('#summ-State').html(sumState);
+    $('#summ-Zip').html(sumZip);
+    $('#summ-Phone').html(sumPhone);
+    $('#summ-Email').html(sumEmail);
 });
 
 

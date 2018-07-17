@@ -2415,9 +2415,26 @@ a.btn:hover {
   margin-bottom: 20px;
 }
 
-.cart-form .field-wrap:focus {
-  -webkit-box-shadow: 0 0 0 2px #803087;
-  box-shadow: 0 0 0 2px #803087;
+.cart-form .field-wrap.select-field label {
+  padding: 7px 14px;
+  opacity: 1;
+}
+
+.cart-form .field-wrap select {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #303030;
+  padding-top: 28px;
+  outline: none;
 }
 
 .cart-form .field-wrap label {
@@ -2426,6 +2443,14 @@ a.btn:hover {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6c6c6c;
 }
 
 .cart-form .field-wrap input {
@@ -2764,6 +2789,7 @@ a.btn:hover {
   border: solid 1px #6c6c6c;
   border-top: none;
   padding: 10px;
+  display: none;
   background-color: rgba(255, 255, 255, 0.25);
 }
 
@@ -2832,6 +2858,11 @@ a.btn:hover {
   font-size: 18px;
   color: #4a306d;
   margin: 0 15px;
+}
+
+.form-2 .field-wrap input + p {
+  margin: 0 15px;
+  font-weight: 500;
 }
 
 .product-package-num {

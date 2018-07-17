@@ -22,8 +22,8 @@
       <div class="headerS__row">
         <div class="headerS__col">
           <div class="headerS__logo">
-            <a class="headerS__logo-link" href="/">
-              <img class="headerS__logo-img" src="/img/shop/logo.svg" alt="logo" />
+            <a class="headerS__logo-link" href="index.html">
+              <img class="headerS__logo-img" src="img/shop/logo.svg" alt="logo" />
             </a>
           </div>
         </div>
@@ -62,7 +62,7 @@
                   <h3>Contact Information</h3>
                   <div class="field-wrap">
                     <label>Email</label>
-                    <input type="email" placeholder="Email">
+                    <input class="formEmail" type="email" placeholder="Email">
                   </div>
                 </div>
                 <div class="cart-form-address">
@@ -70,35 +70,35 @@
                   <div class="cart-form-flex-input c-2">
                     <div class="field-wrap">
                       <label>First Name (optional)</label>
-                      <input type="text" placeholder="First Name (optional)">
+                      <input class="formFirstName" type="text" placeholder="First Name (optional)">
                     </div>
                     <div class="field-wrap">
                       <label>Last Name</label>
-                      <input type="text" placeholder="Last Name">
+                      <input class="formLastName" type="text" placeholder="Last Name">
                     </div>
                   </div>
 
                   <div class="field-wrap">
                     <label>Company (optional)</label>
-                    <input type="text" placeholder="Company (optional)">
+                    <input class="formCompany" type="text" placeholder="Company (optional)">
                   </div>
                   <div class="field-wrap">
                     <label>Address</label>
-                    <input type="text" placeholder="Address">
+                    <input class="formAddress" type="text" placeholder="Address">
                   </div>
                   <div class="field-wrap">
                     <label>Apartment, suite, etc. (optional)</label>
-                    <input type="text" placeholder="Apartment, suite, etc. (optional)">
+                    <input class="formApartment" type="text" placeholder="Apartment, suite, etc. (optional)">
                   </div>
                   <div class="field-wrap">
                     <label>City</label>
-                    <input type="text" placeholder="City">
+                    <input class="formCity" type="text" placeholder="City">
                   </div>
 
                   <div class="cart-form-flex-input c-3">
-                    <div class="field-wrap">
+                    <div class="field-wrap select-field">
                       <label>Country</label>
-                      <select autocomplete="shipping country" name="checkout[shipping_address][country]">
+                      <select class="formCountry" autocomplete="shipping country" name="checkout[shipping_address][country]">
                         <option value="United States">United States</option>
                         <option disabled="disabled" value="---">---</option>
                         <option value="Cuba">Cuba</option>
@@ -126,9 +126,9 @@
                         <option value="United States">United States</option>
                       </select>
                     </div>
-                    <div class="field-wrap">
+                    <div class="field-wrap select-field">
                       <label>State</label>
-                      <select autocomplete="shipping address-level1" name="checkout[shipping_address][province]">
+                      <select class="formState" autocomplete="shipping address-level1" name="checkout[shipping_address][province]">
                         <option value="" disabled="">State</option>
                         <option value="Alabama">Alabama</option>
                         <option value="Alaska">Alaska</option>
@@ -196,13 +196,13 @@
                     </div>
                     <div class="field-wrap">
                       <label>ZIP Code</label>
-                      <input type="text" placeholder="ZIP Code">
+                      <input class="formZip" type="text" placeholder="ZIP Code">
                     </div>
                   </div>
 
                   <div class="field-wrap">
                     <label>Phone</label>
-                    <input type="tel" placeholder="Phone">
+                    <input class="formPhone" type="tel" placeholder="Phone">
                   </div>
 
                   <div class="btn btn-right">
@@ -221,14 +221,14 @@
               <form>
                 <div class="field-wrap">
                   <p>Shipping Address</p>
-                  <input type="text" readonly value="6 street AR 34567, United States">
-                  <a href="#cart-form-1">Edit</a>
+                  <input class="shipAddress" type="text" readonly value="">
+                  <a class="prev-form-1" href="#links">Edit</a>
                 </div>
 
                 <h3>Shipping Method</h3>
                 <div class="field-wrap">
                   <input type="text" readonly value="USPS First Class Shipping">
-                  <a href="#cart-form-1">Free</a>
+                  <p class="shipShipping" style="text-align: right"></p>
                 </div>
 
                 <div class="btn btn-right">
@@ -248,13 +248,13 @@
                 <div class="cart-form-shipping">
                   <div class="field-wrap">
                     <p>Shipping Address</p>
-                    <input type="text" readonly value="6 street AR 34567, United States">
-                    <a href="#">Edit</a>
+                    <input class="payAddress" type="text" readonly value="">
+                    <!--<a href="#">Edit</a>-->
                   </div>
                   <div class="field-wrap">
                     <p>Shipping Method</p>
-                    <input type="text" readonly value="USPS First Class Shipping · Free">
-                    <a href="#">Edit</a>
+                    <input class="payShipping" type="text" readonly value="">
+                    <!--<a href="#">Edit</a>-->
                   </div>
                 </div>
 
@@ -296,11 +296,11 @@
 
                   <div class="cart-form-credit">
                     <div class="field-wrap radio-cart">
-                      <input type="radio" checked id="choice1" name="contact" value="Same as shipping address">
+                      <input type="radio" checked id="choice1" name="contact" value="closed">
                       <label for="choice1">Same as shipping address</label>
                     </div>
                     <div class="field-wrap radio-cart">
-                      <input type="radio" id="choice2" name="contact" value="Same as shipping address">
+                      <input type="radio" id="choice2" name="contact" value="open">
                       <label for="choice2">Use a different billing address</label>
                     </div>
                     <div class="billing-cart">
@@ -332,7 +332,7 @@
                         <input type="text" placeholder="City">
                       </div>
                       <div class="cart-form-flex-input c-3">
-                        <div class="field-wrap">
+                        <div class="field-wrap select-field">
                           <label>Country</label>
                           <select autocomplete="shipping country" name="checkout[shipping_address][country]">
                             <option value="United States">United States</option>
@@ -362,7 +362,7 @@
                             <option value="United States">United States</option>
                           </select>
                         </div>
-                        <div class="field-wrap">
+                        <div class="field-wrap select-field">
                           <label>State</label>
                           <select autocomplete="shipping address-level1" name="checkout[shipping_address][province]">
                             <option value="" disabled="">State</option>
@@ -444,7 +444,8 @@
                 </div>
 
                 <div class="btn btn-right">
-                  <input type="submit" class="cart-form-btn" value="Submit">
+                  <input type="submit" class="cart-form-btn submit-form" value="Submit" disabled>
+                  <a class="submit-form" href="summary.html">OPEN SUMMERY</a>
                 </div>
 
                 <span class="cart-form-please">Please note some customers may experience an international transaction fee</span>
@@ -461,7 +462,7 @@
                 <div class="cart-form-product-package">
                     <div class="product-package-wrap">
                         <div class="product-package-img" id="product-package-1">
-                            <img id="package-img" src="img/package-1.png" alt=""><span id="package-sum"></span>
+                            <img id="package-img" src="/" alt=""><span id="package-quantity"></span>
                         </div>
                         <p id="package-name"></p>
                     </div>
@@ -472,50 +473,10 @@
                             <!--<span class="num-max">+</span>-->
                         <!--</div>-->
                         <div class="product-package-dollar">
-                            <p>$<span id="package-total"></span></p>
+                            <p>$<span id="package-sum"></span></p>
                         </div>
                     </div>
                 </div>
-
-                <!--<div class="cart-form-product-package">-->
-                    <!--<div class="product-package-wrap">-->
-                        <!--<div class="product-package-img" id="product-package-2">-->
-                            <!--<img src="img/package-2.png" alt=""><span id="package-sum-2">4</span>-->
-                        <!--</div>-->
-                        <!--<p>Best Value Package</p>-->
-                    <!--</div>-->
-
-                    <!--<div class="product-package-num-wrap">-->
-                        <!--<div class="product-package-num">-->
-                            <!--<span class="num-min">-</span>-->
-                            <!--<span id="num-sel-2">5</span>-->
-                            <!--<span class="num-max">+</span>-->
-                        <!--</div>-->
-                        <!--<div class="product-package-dollar">-->
-                            <!--<p>$<span id="package-dollar-2">99.98</span></p>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-
-                <!--<div class="cart-form-product-package">-->
-                    <!--<div class="product-package-wrap">-->
-                        <!--<div class="product-package-img" id="product-package-3">-->
-                            <!--<img src="img/package-3.png" alt=""><span id="package-sum-3">1</span>-->
-                        <!--</div>-->
-                        <!--<p>Most Popular Package</p>-->
-                    <!--</div>-->
-
-                    <!--<div class="product-package-num-wrap">-->
-                        <!--<div class="product-package-num">-->
-                            <!--<span class="num-min">-</span>-->
-                            <!--<span id="num-sel-3">1</span>-->
-                            <!--<span class="num-max">+</span>-->
-                        <!--</div>-->
-                        <!--<div class="product-package-dollar">-->
-                            <!--<p>$<span id="package-dollar-3">113.97</span></p>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
             </div>
 
             <!-- Discount-->
@@ -532,7 +493,7 @@
             <!-- Coast-->
             <div class="cart-form-coast">
               <p>Subtotal
-                <span id="subtotal">$69.99</span>
+                <span>$<span id="subtotal"></span></span>
               </p>
               <p>Shipping
                 <span id="shipping">$5</span>
@@ -542,150 +503,12 @@
             <!-- Total-->
             <div class="cart-form-total">
               <p>Total
-                <span id="total">$74.99</span>
+                <span id="total">$</span>
               </p>
             </div>
           </div>
 
         </div>
-      </div>
-
-      <!-- summary  block -->
-      <div class="summary">
-        <h3 class="summary__title">Thank you for your order, First Name</h3>
-
-        <!-- table 1 -->
-        <div class="summ-order summ-table">
-          <h4 class="summ-table__title">Items Ordered</h4>
-          <div class="summ-table__container">
-            <div class="summ-order__row">
-              <div class="summ-order__col">
-                <h5 class="summ-order__name">Product</h5>
-              </div>
-              <div class="summ-order__col">
-                <h5 class="summ-order__name">Price</h5>
-              </div>
-              <div class="summ-order__col">
-                <h5 class="summ-order__name">S & H</h5>
-              </div>
-              <div class="summ-order__col">
-                <h5 class="summ-order__name">Total</h5>
-              </div>
-            </div>
-
-            <div class="summ-order__row">
-              <div class="summ-order__col">
-                <p class="summ-order__text summ-order__prod" id="summ-product">Product</p>
-              </div>
-              <div class="summ-order__col">
-                <p class="summ-order__text" id="summ-price">$00.00</p>
-              </div>
-              <div class="summ-order__col">
-                <p class="summ-order__text" id="summ-sh">$00.00</p>
-              </div>
-              <div class="summ-order__col"></div>
-            </div>
-
-            <div class="summ-order__row">
-              <div class="summ-order__col"></div>
-              <div class="summ-order__col"></div>
-              <div class="summ-order__col"></div>
-              <div class="summ-order__col">
-                <p class="summ-order__total" id="summ-total">$00.00</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- table 2 -->
-        <div class="summ-info summ-table">
-          <h4 class="summ-table__title">Shipping Information</h4>
-          <div class="summ-table__container">
-            <div class="summ-info__row">
-              <div class="summ-info__col">
-                <h5 class="summ-info__name">First Name:</h5>
-              </div>
-              <div class="summ-info__col">
-                <p class="summ-info__text">First Name</p>
-              </div>
-            </div>
-
-            <div class="summ-info__row">
-              <div class="summ-info__col">
-                <h5 class="summ-info__name">Last Name:</h5>
-              </div>
-              <div class="summ-info__col">
-                <p class="summ-info__text">Last Name</p>
-              </div>
-            </div>
-
-            <div class="summ-info__row">
-              <div class="summ-info__col">
-                <h5 class="summ-info__name">Address:</h5>
-              </div>
-              <div class="summ-info__col">
-                <p class="summ-info__text">Street and number</p>
-              </div>
-            </div>
-
-            <div class="summ-info__row">
-              <div class="summ-info__col">
-                <h5 class="summ-info__name">Apartment, suite:</h5>
-              </div>
-              <div class="summ-info__col">
-                <p class="summ-info__text">Street and number</p>
-              </div>
-            </div>
-
-            <div class="summ-info__row">
-              <div class="summ-info__col">
-                <h5 class="summ-info__name">City:</h5>
-              </div>
-              <div class="summ-info__col">
-                <p class="summ-info__text">City</p>
-              </div>
-            </div>
-
-            <div class="summ-info__row">
-              <div class="summ-info__col">
-                <h5 class="summ-info__name">State:</h5>
-              </div>
-              <div class="summ-info__col">
-                <p class="summ-info__text">State</p>
-              </div>
-            </div>
-
-            <div class="summ-info__row">
-              <div class="summ-info__col">
-                <h5 class="summ-info__name">Zip Code:</h5>
-              </div>
-              <div class="summ-info__col">
-                <p class="summ-info__text">Zip Code</p>
-              </div>
-            </div>
-
-            <div class="summ-info__row">
-              <div class="summ-info__col">
-                <h5 class="summ-info__name">Pnone:</h5>
-              </div>
-              <div class="summ-info__col">
-                <p class="summ-info__text">(123)555-5555</p>
-              </div>
-            </div>
-
-            <div class="summ-info__row">
-              <div class="summ-info__col">
-                <h5 class="summ-info__name">Email:</h5>
-              </div>
-              <div class="summ-info__col">
-                <p class="summ-info__text">email@gmail.com</p>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-
       </div>
 
     </div>

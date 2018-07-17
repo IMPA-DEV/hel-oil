@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Heleaf oil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,400i|Roboto:400,500,700" rel="stylesheet" />
+    <!--favicon-->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/shop/favicon.png" />
+    <link href="libs/slick/slick.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+</head>
+
+<body>
+
+<!--Header-->
+<header class="headerS" id="header">
+    <div class="container">
+        <div class="headerS__row">
+            <div class="headerS__col">
+                <div class="headerS__logo">
+                    <a class="headerS__logo-link" href="index.html">
+                        <img class="headerS__logo-img" src="img/shop/logo.svg" alt="logo" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--bread crumb-->
+<section class="links" id="links">
+    <div class="container">
+        <div class="links__item">
+            <a class="links__item-home" href="index.html">home</a>
+            <div class="links__item-arr"></div>
+            <span class="links__item-opa opa-1 active">summary order</span>
+        </div>
+    </div>
+</section>
+
+<!--Main content-->
+<section class="page-sect cart-form-page ">
+    <div class="container">
+
+        <!-- summary  block -->
+        <div class="summary">
+            <h3 class="summary__title">Thank you for your order, First Name</h3>
+
+            <!-- table 1 -->
+            <div class="summ-order summ-table">
+                <h4 class="summ-table__title">Items Ordered</h4>
+                <div class="summ-table__container">
+                    <div class="summ-order__row">
+                        <div class="summ-order__col">
+                            <h5 class="summ-order__name">Product</h5>
+                        </div>
+                        <div class="summ-order__col">
+                            <h5 class="summ-order__name">Price</h5>
+                        </div>
+                        <div class="summ-order__col">
+                            <h5 class="summ-order__name">S & H</h5>
+                        </div>
+                        <div class="summ-order__col">
+                            <h5 class="summ-order__name">Total</h5>
+                        </div>
+                    </div>
+
+                    <div class="summ-order__row">
+                        <div class="summ-order__col">
+                            <p class="summ-order__text summ-order__prod" id="summ-product">Product</p>
+                        </div>
+                        <div class="summ-order__col">
+                            <p class="summ-order__text" id="summ-price">$00.00</p>
+                        </div>
+                        <div class="summ-order__col">
+                            <p class="summ-order__text" id="summ-sh">$00.00</p>
+                        </div>
+                        <div class="summ-order__col"></div>
+                    </div>
+
+                    <div class="summ-order__row">
+                        <div class="summ-order__col"></div>
+                        <div class="summ-order__col"></div>
+                        <div class="summ-order__col"></div>
+                        <div class="summ-order__col">
+                            <p class="summ-order__total" id="summ-total">$00.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- table 2 -->
+            <div class="summ-info summ-table">
+                <h4 class="summ-table__title">Shipping Information</h4>
+                <div class="summ-table__container">
+                    <div class="summ-info__row">
+                        <div class="summ-info__col">
+                            <h5 class="summ-info__name">First Name:</h5>
+                        </div>
+                        <div class="summ-info__col">
+                            <p class="summ-info__text" id="summ-FirstName"></p>
+                        </div>
+                    </div>
+
+                    <div class="summ-info__row">
+                        <div class="summ-info__col">
+                            <h5 class="summ-info__name">Last Name:</h5>
+                        </div>
+                        <div class="summ-info__col">
+                            <p class="summ-info__text" id="summ-LastName"></p>
+                        </div>
+                    </div>
+
+                    <div class="summ-info__row">
+                        <div class="summ-info__col">
+                            <h5 class="summ-info__name">Address:</h5>
+                        </div>
+                        <div class="summ-info__col">
+                            <p class="summ-info__text" id="summ-Address"></p>
+                        </div>
+                    </div>
+
+                    <div class="summ-info__row">
+                        <div class="summ-info__col">
+                            <h5 class="summ-info__name">Apartment, suite:</h5>
+                        </div>
+                        <div class="summ-info__col">
+                            <p class="summ-info__text" id="summ-Apartment"></p>
+                        </div>
+                    </div>
+
+                    <div class="summ-info__row">
+                        <div class="summ-info__col">
+                            <h5 class="summ-info__name">City:</h5>
+                        </div>
+                        <div class="summ-info__col">
+                            <p class="summ-info__text" id="summ-City"></p>
+                        </div>
+                    </div>
+
+                    <div class="summ-info__row">
+                        <div class="summ-info__col">
+                            <h5 class="summ-info__name">State:</h5>
+                        </div>
+                        <div class="summ-info__col">
+                            <p class="summ-info__text" id="summ-State"></p>
+                        </div>
+                    </div>
+
+                    <div class="summ-info__row">
+                        <div class="summ-info__col">
+                            <h5 class="summ-info__name">Zip Code:</h5>
+                        </div>
+                        <div class="summ-info__col">
+                            <p class="summ-info__text" id="summ-Zip"></p>
+                        </div>
+                    </div>
+
+                    <div class="summ-info__row">
+                        <div class="summ-info__col">
+                            <h5 class="summ-info__name">Pnone:</h5>
+                        </div>
+                        <div class="summ-info__col">
+                            <p class="summ-info__text" id="summ-Phone"></p>
+                        </div>
+                    </div>
+
+                    <div class="summ-info__row">
+                        <div class="summ-info__col">
+                            <h5 class="summ-info__name">Email:</h5>
+                        </div>
+                        <div class="summ-info__col">
+                            <p class="summ-info__text" id="summ-Email"></p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!--Footer-->
+<footer class="footer-forms">
+    <div class="container">
+        <!-- footer nav-->
+        <div class="footer-forms-nav">
+            <nav>
+                <a href="refund-policy.html">Refund policy</a>
+                <a href="privacy-policy.html">Privacy policy</a>
+                <a href="terms-of-use.html">Terms of use</a>
+                <a href="#">Description</a>
+                <a href="contacts.html">Contact us</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="libs/animate/animate-css.js"></script>
+<script src="libs/waypoints/waypoints.min.js"></script>
+<script src="libs/jparallax/js/jquery.event.frame.js"></script>
+<script src="libs/jparallax/js/jquery.parallax.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+
+</html>

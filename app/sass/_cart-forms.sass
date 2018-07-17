@@ -36,12 +36,37 @@
     position: relative
     overflow: hidden
     margin-bottom: 20px
-    &:focus
-      box-shadow: 0 0 0 2px #803087
+    &.select-field
+      label
+        padding: 7px 14px
+        opacity: 1
+    select
+      width: 100%
+      background-color: transparent
+      border: none
+      padding: 0 10px
+      font-size: 16px
+      font-weight: normal
+      font-style: normal
+      font-stretch: normal
+      line-height: normal
+      letter-spacing: normal
+      text-align: left
+      color: #303030
+      padding-top: 28px
+      outline: none
     label
       position: absolute
       opacity: 0
       transition: 0.2s
+      font-size: 14px
+      font-weight: normal
+      font-style: normal
+      font-stretch: normal
+      line-height: normal
+      letter-spacing: normal
+      text-align: left
+      color: #6c6c6c
     input
       display: block
       -webkit-box-sizing: border-box
@@ -256,6 +281,7 @@
     border: solid 1px #6c6c6c
     border-top: none
     padding: 10px
+    display: none
     background-color: rgba(255, 255, 255, 0.25)
 
 .discount-flex
@@ -302,6 +328,9 @@
       font-size: 18px
       color: #4a306d
       margin: 0 15px
+    input+p
+      margin: 0 15px
+      font-weight: 500
 
 .product-package
   &-num
