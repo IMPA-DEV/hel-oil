@@ -132,6 +132,58 @@ $(document).ready(function(){
     });
   }
 
+    /* first form */
+    $("#first-form").submit(function(e) { //Change
+        e.preventDefault();
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "mail.php", //Change
+            data: th.serialize()
+        }).error(function() {
+            alert("Error! " + e);
+        }).success(function() {
+            $('.cart-form').hide();
+            $('.form-2').show();
+            $('.links__item-opa').removeClass('active');
+            $('.opa-2').addClass('active');
+        });
+        return false;
+    });
+
+    /* form cart for nmi */
+    $('#payment-form').submit(function(e) {
+        e.preventDefault();
+        var th = $(this);
+        $.ajax({
+            url: 'nmi.php',
+            data: th.serialize(),
+            processData: false,
+            contentType: false,
+            // cache: false,
+            type: 'POST',
+            success: function(data) {
+                alert('Success before if data...');
+                if(data==1) {
+                    alert('Ok');
+                    document.location.href = 'summary.html';
+                }
+                else {
+                    alert(data)
+                }
+            },
+            error: function() {
+                alert('Something went wrong!');
+            }
+        });
+    });
+
+    /* mask for card */
+    $('#card-input').bind('input modified', function() {
+        $(this).mask('9?999999999999999', {placeholder:"X", allow: true});
+    }).trigger('modified');
+
+
   /* Toggle dop form "Use a different billing address" */
     $('input[name=contact]').on('click', function () {
       if($('input[value=open]:checked')){
@@ -140,13 +192,6 @@ $(document).ready(function(){
     });
 
 
-  /* form next */
-    $('.next-form-2').on('click', function () {
-        $('.cart-form').hide();
-        $('.form-2').show();
-        $('.links__item-opa').removeClass('active');
-        $('.opa-2').addClass('active')
-    })
 
     $('.next-form-3').on('click', function () {
         $('.cart-form').hide();
@@ -177,6 +222,21 @@ $(document).ready(function(){
         $(this).addClass('cart-sel')
     });
 
+    /* checkpoint fo form cart */
+    $('#scales').on('click', function () {
+        if ($(this).is(':checked')) {
+            $('input[type="submit"]').removeAttr('disabled');
+        } else {
+            $('input[type="submit"]').attr('disabled', true);
+        }
+    });
+
+    /* what vcc */
+    $('.cvv-what').on('click', function () {
+        $('.cvv-codeInst').slideToggle(300);
+    })
+
+    /* add card click*/
     var addCart = document.getElementById('addCart');
     $(addCart).on('click', function (e) {
         if($('#select-quantity').val() == 0){
@@ -217,12 +277,18 @@ $(document).ready(function(){
     var subtotal = packageSum*packageQuantity;
     var subtotal = subtotal.toFixed(2);
 
+    var num_subtotal = parseFloat(subtotal);
+    var num_packageShipping = parseFloat(packageShipping);
+    var num_total = num_subtotal + num_packageShipping;
+
     if(packageShipping > 1){
-        $('#shipping').html('$'+ packageShipping);
-        $('#total').html('$' + subtotal + packageShipping);
+        $('#shipping, .shipShipping').html('$'+ packageShipping);
+        $('#total, #summ-total').html('$' + num_total);
+        var shipMethod = 'USPS First Class Shipping · $' + packageShipping
     } else{
-        $('#shipping').html(packageShipping);
-        $('#total').html('$' + subtotal);
+        $('#total, #summ-total').html('$' + subtotal);
+        $('#shipping, .shipShipping, #summ-sh').html('Free');
+        var shipMethod = 'USPS First Class Shipping · Free';
     }
 
     $('#package-name').html(packageName);
@@ -231,7 +297,7 @@ $(document).ready(function(){
     $('#subtotal').html(subtotal);
 
     /* Cart Form #1 */
-    $('.next-form-2').on('click', function () {
+    $('[type=submit]').on('click', function () {
         var cardEmail      = $('.formEmail').val();
         var cardFirstName  = $('.formFirstName').val();
         var cardLastName   = $('.formLastName').val();
@@ -259,25 +325,21 @@ $(document).ready(function(){
 
         /* Cart Form #2 Shipping Method */
         var formAddress  = localStorage.getItem('address');
-        var formShipping = localStorage.getItem('shipping');
         var formCountry  = localStorage.getItem('country');
-
-
         $('.shipAddress').val(formAddress);
-        $('.shipShipping').html(formShipping);
 
         /* Cart #3 Payment Method */
-        var payAddress = formAddress + ', ' + formCountry;
-        var payShipping = 'USPS First Class Shipping · ' + formShipping;
-
-        $('.payAddress').val(payAddress);
-        $('.payShipping').val(payShipping);
+        $('.next-form-3').on('click',function () {
+            var payAddress = formAddress + ', ' + formCountry;
+            var payShipping = shipMethod;
+            $('.payAddress').val(payAddress);
+            $('.payShipping').val(payShipping);
+        })
     });
 
     /* summery page */
     var sumProduct = localStorage.getItem('name');
     var sumPrice = localStorage.getItem('subtotal');
-    var sumTotal = localStorage.getItem('subtotal');
     var sumFirstName = localStorage.getItem('firstName');
     var sumLastName = localStorage.getItem('lastName');
     var sumApartment = localStorage.getItem('apartment');
@@ -288,11 +350,11 @@ $(document).ready(function(){
     var sumZip = localStorage.getItem('zip');
     var sumPhone = localStorage.getItem('phone');
     var sumEmail = localStorage.getItem('email');
+    var sumShipping = localStorage.getItem('shipping');
 
     $('#summ-product').html(sumProduct);
     $('#summ-price').html('$' + sumPrice);
-    $('#summ-total').html('$' + sumTotal);
-    $('#summ-FirstName').html(sumFirstName);
+    $('#summ-FirstName, #summ-FirstNameTotal').html(sumFirstName);
     $('#summ-LastName').html(sumLastName);
     $('#summ-Address').html(sumCountry +' ' + sumAddress);
     $('#summ-Apartment').html(sumApartment);
@@ -301,6 +363,7 @@ $(document).ready(function(){
     $('#summ-Zip').html(sumZip);
     $('#summ-Phone').html(sumPhone);
     $('#summ-Email').html(sumEmail);
+    $('#summ-sh').html('$'+ sumShipping);
 });
 
 

@@ -57,12 +57,13 @@
           <div class="cart-form-flex-left">
             <!--customer information-->
             <div id="cart-form-1" class="cart-form form-1 active">
-              <form>
+              <form id="first-form">
+
                 <div class="cart-form-information">
                   <h3>Contact Information</h3>
                   <div class="field-wrap">
                     <label>Email</label>
-                    <input class="formEmail" type="email" placeholder="Email">
+                    <input name="Value7" class="formEmail" type="email" placeholder="Email" required>
                   </div>
                 </div>
                 <div class="cart-form-address">
@@ -70,35 +71,35 @@
                   <div class="cart-form-flex-input c-2">
                     <div class="field-wrap">
                       <label>First Name (optional)</label>
-                      <input class="formFirstName" type="text" placeholder="First Name (optional)">
+                      <input name="Value1" class="formFirstName" type="text" placeholder="First Name (optional)" required>
                     </div>
                     <div class="field-wrap">
                       <label>Last Name</label>
-                      <input class="formLastName" type="text" placeholder="Last Name">
+                      <input name="Value2" class="formLastName" type="text" placeholder="Last Name" required>
                     </div>
                   </div>
 
                   <div class="field-wrap">
                     <label>Company (optional)</label>
-                    <input class="formCompany" type="text" placeholder="Company (optional)">
+                    <input name="Value10" class="formCompany" type="text" placeholder="Company (optional)">
                   </div>
                   <div class="field-wrap">
                     <label>Address</label>
-                    <input class="formAddress" type="text" placeholder="Address">
+                    <input name="Value3" class="formAddress" type="text" placeholder="Address" required>
                   </div>
                   <div class="field-wrap">
                     <label>Apartment, suite, etc. (optional)</label>
-                    <input class="formApartment" type="text" placeholder="Apartment, suite, etc. (optional)">
+                    <input name="Value4" class="formApartment" type="text" placeholder="Apartment, suite, etc. (optional)">
                   </div>
                   <div class="field-wrap">
                     <label>City</label>
-                    <input class="formCity" type="text" placeholder="City">
+                    <input name="Value8" class="formCity" type="text" placeholder="City" required>
                   </div>
 
                   <div class="cart-form-flex-input c-3">
                     <div class="field-wrap select-field">
                       <label>Country</label>
-                      <select class="formCountry" autocomplete="shipping country" name="checkout[shipping_address][country]">
+                      <select name="Value11" class="formCountry" autocomplete="shipping country"  required>
                         <option value="United States">United States</option>
                         <option disabled="disabled" value="---">---</option>
                         <option value="Cuba">Cuba</option>
@@ -128,7 +129,7 @@
                     </div>
                     <div class="field-wrap select-field">
                       <label>State</label>
-                      <select class="formState" autocomplete="shipping address-level1" name="checkout[shipping_address][province]">
+                      <select name="Value9" class="formState" autocomplete="shipping address-level1" required>
                         <option value="" disabled="">State</option>
                         <option value="Alabama">Alabama</option>
                         <option value="Alaska">Alaska</option>
@@ -196,19 +197,19 @@
                     </div>
                     <div class="field-wrap">
                       <label>ZIP Code</label>
-                      <input class="formZip" type="text" placeholder="ZIP Code">
+                      <input name="Value5" class="formZip" type="text" placeholder="ZIP Code" required>
                     </div>
                   </div>
 
                   <div class="field-wrap">
                     <label>Phone</label>
-                    <input class="formPhone" type="tel" placeholder="Phone">
+                    <input name="Value6" class="formPhone" type="tel" placeholder="Phone" required>
                   </div>
 
                   <div class="btn btn-right">
-                    <a class="cart-form-btn next-form-2" href="#links">Submit
+                    <button type="submit" class="cart-form-btn form-next-2">Submit
                       <span>Continue to shipping method</span>
-                    </a>
+                    </button>
                   </div>
 
                   <span class="cart-form-please">Please note some customers may experience an international transaction fee</span>
@@ -218,7 +219,7 @@
 
             <!--shipping method-->
             <div id="cart-form-2" class="cart-form form-2">
-              <form>
+
                 <div class="field-wrap">
                   <p>Shipping Address</p>
                   <input class="shipAddress" type="text" readonly value="">
@@ -238,59 +239,120 @@
                 </div>
                 <span class="cart-form-please">Please note some customers may experience an international transaction fee</span>
                 <a href="#links" class="back-to prev-form-1">
-                  <span></span>Return to customer information</a>
-              </form>
+                  <span></span>Return to customer information
+                </a>
             </div>
 
             <!--payment method-->
             <div id="cart-form-3" class="cart-form form-3">
-              <form>
-                <div class="cart-form-shipping">
-                  <div class="field-wrap">
-                    <p>Shipping Address</p>
-                    <input class="payAddress" type="text" readonly value="">
-                    <!--<a href="#">Edit</a>-->
-                  </div>
-                  <div class="field-wrap">
-                    <p>Shipping Method</p>
-                    <input class="payShipping" type="text" readonly value="">
-                    <!--<a href="#">Edit</a>-->
-                  </div>
+              <div class="cart-form-shipping">
+                <div class="field-wrap">
+                  <p>Shipping Address</p>
+                  <input class="payAddress" type="text" readonly value="">
+                  <!--<a href="#">Edit</a>-->
                 </div>
+                <div class="field-wrap">
+                  <p>Shipping Method</p>
+                  <input class="payShipping" type="text" readonly value="">
+                  <!--<a href="#">Edit</a>-->
+                </div>
+              </div>
+
+                <!-- Carr form -->
+              <form id="payment-form">
+                <input type="hidden" name="Field1" value="FirstName">
+                <input type="hidden" name="Value1">
+                <input type="hidden" name="Field2" value="LastName">
+                <input type="hidden" name="Value2">
+                <input type="hidden" name="Field3" value="Address1">
+                <input type="hidden" name="Value3">
+                <input type="hidden" name="Field4" value="Address2">
+                <input type="hidden" name="Value4">
+                <input type="hidden" name="Field5" value="ZipCode">
+                <input type="hidden" name="Value5">
+                <input type="hidden" name="Field6" value="PhoneNumber">
+                <input type="hidden" name="Value6">
+                <input type="hidden" name="Field7" value="Email">
+                <input type="hidden" name="Value7">
+                <input type="hidden" name="Field8" value="City">
+                <input type="hidden" name="Value8">
+                <input type="hidden" name="Field9" value="State">
+                <input type="hidden" name="Value9">
+
+                <input name="first_name" type="hidden">
+                <input name="last_name" type="hidden">
+                <input name="address_1" type="hidden">
+                <input name="address_2" type="hidden">
+                <input name="postal_code" type="hidden">
+                <input name="phone" type="hidden">
+                <input name="email" type="hidden">
+                <input name="city" type="hidden">
+                <input name="state" type="hidden">
 
                 <div class="cart-form-payment">
                   <h3>Payment method</h3>
                   <p>All transactions are secure and encrypted.</p>
                   <div class="field-wrap">
                     <label>Credit Card #</label>
-                    <input type="text" placeholder="Credit Card #">
+                    <input id="card-input" class="input-stl" type="text" name="card" pattern="[0-9]{16}" placeholder="Credit card #" required>
                   </div>
 
                   <div class="cart-form-flex-input c-2">
                     <div class="field-wrap">
                       <label>01 (Jan)</label>
-                      <input type="text" placeholder="01 (Jan)">
+                      <!--<input type="text" placeholder="01 (Jan)">-->
+                      <select class="cart-select" name="month">
+                        <option value="01">01 (Jan)</option>
+                        <option value="02">02 (Feb)</option>
+                        <option value="03">03 (Mar)</option>
+                        <option value="04">04 (Apr)</option>
+                        <option value="05">05 (May)</option>
+                        <option value="06">06 (Jun)</option>
+                        <option value="07">07 (Jul)</option>
+                        <option value="08">08 (Aug)</option>
+                        <option value="09">09 (Sep)</option>
+                        <option value="10">10 (Oct)</option>
+                        <option value="11">11 (Nov)</option>
+                        <option value="12">12 (Dec)</option>
+                      </select>
                     </div>
                     <div class="field-wrap">
                       <label>2018</label>
-                      <input type="text" placeholder="2018">
+                      <!--<input type="text" placeholder="2018">-->
+                      <select class="cart-select" name="year">
+                        <option value="18">2018</option>
+                        <option value="19">2019</option>
+                        <option value="20">2020</option>
+                        <option value="21">2021</option>
+                        <option value="22">2022</option>
+                        <option value="23">2023</option>
+                        <option value="24">2024</option>
+                        <option value="25">2025</option>
+                        <option value="26">2026</option>
+                        <option value="27">2027</option>
+                        <option value="28">2028</option>
+                        <option value="29">2029</option>
+                      </select>
                     </div>
                   </div>
 
                   <div class="cart-form-flex-input c-2">
                     <div class="field-wrap">
                       <label>CVV Code</label>
-                      <input type="text" placeholder="CVV Code">
+                      <input type="text" name="cvv" placeholder="CVV Code" required>
                     </div>
-                    <p>What is this?</p>
+                    <p class="cvv-what">What is this?</p>
                   </div>
+                  <p class="cvv-codeInst">
+                    <span>"Card Verification Value" on your credit card or debit card is a 3 digit number on VISA®, MasterCard® and Discover® branded credit and debit cards. On your American Express® branded credit or debit card it is a 4 digit numeric code.</span>
+                  </p>
 
                   <div class="cart-form-check">
                     <input type="checkbox" id="scales" value="scales" />
                     <label for="scales">I agree to the terms and conditions</label>
                   </div>
                 </div>
-
+                <!-- Billing Form -->
                 <div class="cart-form-billing">
                   <h3>Billing address</h3>
 
@@ -442,16 +504,17 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="btn btn-right">
-                  <input type="submit" class="cart-form-btn submit-form" value="Submit" disabled>
-                  <a class="submit-form" href="summary.html">OPEN SUMMERY</a>
-                </div>
-
-                <span class="cart-form-please">Please note some customers may experience an international transaction fee</span>
-                <a href="#links" class="back-to prev-form-2">
-                  <span></span>Return to shipping method</a>
               </form>
+
+              <div class="btn btn-right">
+                <input form="payment-form" type="submit" class="cart-form-btn submit-form" value="Submit" disabled>
+                <a class="submit-form" href="summary.html">OPEN SUMMERY</a>
+              </div>
+
+              <span class="cart-form-please">Please note some customers may experience an international transaction fee</span>
+              <a href="#links" class="back-to prev-form-2">
+                <span></span>Return to shipping method
+              </a>
             </div>
           </div>
 
@@ -531,6 +594,7 @@
   </footer>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/jquery.maskedinput.js"></script>
   <script src="libs/animate/animate-css.js"></script>
   <script src="libs/waypoints/waypoints.min.js"></script>
   <script src="libs/jparallax/js/jquery.event.frame.js"></script>

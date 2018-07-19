@@ -2453,6 +2453,7 @@ a.btn:hover {
   color: #6c6c6c;
 }
 
+.cart-form .field-wrap .cart-select,
 .cart-form .field-wrap input {
   display: block;
   -webkit-box-sizing: border-box;
@@ -2686,6 +2687,7 @@ a.btn:hover {
 .cart-form-flex-right {
   max-width: 464px;
   width: 100%;
+  margin-left: 20px;
 }
 
 .cart-form-flex-input {
@@ -2938,6 +2940,29 @@ a.btn:hover {
 
 .links__item-opa.active {
   color: #303030;
+}
+
+.submit-form:disabled {
+  background-color: #6c6c6c;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+input[type='submit'], button[type='submit'] {
+  cursor: pointer;
+}
+
+.cvv-what {
+  cursor: pointer;
+}
+
+.cvv-what:hover {
+  color: #4a306d;
+}
+
+.cvv-codeInst {
+  display: none;
 }
 
 .summary__title {

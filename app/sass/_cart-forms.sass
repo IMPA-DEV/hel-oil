@@ -67,6 +67,7 @@
       letter-spacing: normal
       text-align: left
       color: #6c6c6c
+    .cart-select,
     input
       display: block
       -webkit-box-sizing: border-box
@@ -218,6 +219,7 @@
     &-right
       max-width: 464px
       width: 100%
+      margin-left: 20px
     &-input
       display: flex
       justify-content: space-between
@@ -385,3 +387,15 @@
 
 .links__item-opa.active
   color: #303030
+.submit-form:disabled
+  background-color: #6c6c6c
+  transition: 0.3s
+input[type='submit'],button[type='submit']
+  cursor: pointer
+.cvv-what
+  cursor: pointer
+  &:hover
+    color: $color_main
+.cvv-codeInst
+  display: none
+
